@@ -8,6 +8,7 @@ const LOCALES = {
 ════════════════════════════════════════════════════ */
 fr: {
   ui: {
+    game_title:      "Le Jeu du Phishing",
     brought_by:      "Proposé par",
     subtitle:        "Apprenez à détecter le phishing en 10 questions",
     questions_count: "questions",
@@ -228,6 +229,7 @@ fr: {
 ════════════════════════════════════════════════════ */
 en: {
   ui: {
+    game_title:      "The Phishing Game",
     brought_by:      "Brought to you by",
     subtitle:        "Learn to detect phishing in 10 questions",
     questions_count: "questions",
@@ -448,6 +450,7 @@ en: {
 ════════════════════════════════════════════════════ */
 es: {
   ui: {
+    game_title:      "El Juego de Phishing",
     brought_by:      "Presentado por",
     subtitle:        "Aprende a detectar el phishing en 10 preguntas",
     questions_count: "preguntas",

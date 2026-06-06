@@ -42,7 +42,7 @@ body::before {
 }
 
 /* ── SCREENS ── */
-.screen        { display: none; min-height: 100vh; position: relative; z-index: 1; }
+.screen        { display: none; min-height: 100vh; position: relative; z-index: 1; padding-bottom: 44px; }
 .screen.active { display: block; }
 
 #screen-welcome.active {
@@ -144,25 +144,34 @@ body::before {
 .stat-num   { display: block; font-size: 1.4rem; font-weight: 700; color: var(--accent); line-height: 1.2; }
 .stat-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
 
-.brought-by {
+.site-footer {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 150;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 9px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
+  gap: 10px;
   font-size: .78rem;
-  color: var(--muted);
 }
+.footer-title {
+  font-weight: 600;
+  color: var(--text);
+}
+.footer-sep { color: var(--border); }
+.footer-by  { color: var(--muted); }
+.footer-logo-link { display: flex; align-items: center; }
 .p4a-logo {
-  height: 22px;
+  height: 20px;
   width: auto;
-  opacity: .85;
+  opacity: .8;
   transition: opacity .2s;
   vertical-align: middle;
 }
-.brought-by a:hover .p4a-logo { opacity: 1; }
+.footer-logo-link:hover .p4a-logo { opacity: 1; }
 
 /* ── BUTTONS ── */
 .btn-primary {

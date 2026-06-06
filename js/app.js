@@ -34,6 +34,7 @@ function applyI18n() {
     if (typeof v === 'string') el.textContent = v;
   });
   document.documentElement.lang = state.lang;
+  document.title = t('game_title');
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === state.lang);
   });

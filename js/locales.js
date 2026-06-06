@@ -8,6 +8,7 @@ const LOCALES = {
 ════════════════════════════════════════════════════ */
 fr: {
   ui: {
+    brought_by:      "Proposé par",
     subtitle:        "Apprenez à détecter le phishing en 10 questions",
     questions_count: "questions",
     minutes:         "min",
@@ -227,6 +228,7 @@ fr: {
 ════════════════════════════════════════════════════ */
 en: {
   ui: {
+    brought_by:      "Brought to you by",
     subtitle:        "Learn to detect phishing in 10 questions",
     questions_count: "questions",
     minutes:         "min",
@@ -446,6 +448,7 @@ en: {
 ════════════════════════════════════════════════════ */
 es: {
   ui: {
+    brought_by:      "Presentado por",
     subtitle:        "Aprende a detectar el phishing en 10 preguntas",
     questions_count: "preguntas",
     minutes:         "min",

@@ -1,6 +1,6 @@
-# PhishGuard — Quiz Anti-Phishing
+# The Phishing Game
 
-Jeu/quiz de sensibilisation au phishing, hébergé sur GitHub Pages.  
+Jeu/quiz de sensibilisation au phishing, proposé par [Phish4All](https://www.phish4all.com), hébergé sur GitHub Pages.  
 Disponible en **français**, **anglais** et **espagnol**.
 
 ## Fonctionnalités

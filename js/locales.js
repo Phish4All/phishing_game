@@ -106,15 +106,15 @@ fr: {
     /* ── QCM 5 ── */
     {
       id: 5, type: 'qcm',
-      question: "Qu'est-ce que le 'spear phishing' ?",
+      question: "Un site web affichant un cadenas (HTTPS) dans la barre d'adresse est-il forcément sûr ?",
       options: [
-        "Une attaque ciblée et personnalisée visant une personne ou organisation spécifique",
-        "Une attaque qui cible des milliers de personnes aléatoirement",
-        "Un phishing uniquement via les réseaux sociaux",
-        "Un logiciel malveillant transmis par clé USB",
+        "Oui, le cadenas garantit que le site est légitime et sans danger",
+        "Non, HTTPS signifie seulement que la connexion est chiffrée — un site de phishing peut aussi avoir un cadenas",
+        "Le cadenas prouve que l'entreprise a payé une certification de sécurité premium",
+        "Seuls les sites gouvernementaux peuvent obtenir le cadenas HTTPS",
       ],
-      correct: 0,
-      explanation: "Le spear phishing est une attaque sophistiquée où l'attaquant recherche sa cible (nom, poste, collègues, projets) pour créer un message très crédible et personnalisé. Il est bien plus difficile à détecter qu'un phishing de masse et cible souvent les entreprises et les cadres.",
+      correct: 1,
+      explanation: "Le cadenas HTTPS indique uniquement que les données échangées entre vous et le site sont chiffrées — il ne garantit en rien la légitimité du site. N'importe qui, y compris les cybercriminels, peut obtenir gratuitement un certificat HTTPS. Ne vous fiez jamais au cadenas seul pour juger de la fiabilité d'un site.",
       flags: [],
     },
     /* ── EMAIL 1 – PayPal (phishing) ── */
@@ -327,15 +327,15 @@ en: {
     /* ── QCM 5 ── */
     {
       id: 5, type: 'qcm',
-      question: "What is 'spear phishing'?",
+      question: "Does a website showing a padlock (HTTPS) in the address bar mean it's safe?",
       options: [
-        "A targeted, personalised attack aimed at a specific person or organisation",
-        "An attack targeting thousands of random people",
-        "Phishing only through social media",
-        "Malware transmitted via USB drive",
+        "Yes, the padlock guarantees the site is legitimate and harmless",
+        "No, HTTPS only means the connection is encrypted — a phishing site can have a padlock too",
+        "The padlock proves the company paid for a premium security certification",
+        "Only government websites can obtain the HTTPS padlock",
       ],
-      correct: 0,
-      explanation: "Spear phishing is a sophisticated attack where the attacker researches their target (name, job title, colleagues, projects) to craft a highly credible and personalised message. It is far harder to detect than mass phishing and often targets companies and executives.",
+      correct: 1,
+      explanation: "The HTTPS padlock only means the data exchanged between you and the site is encrypted — it says nothing about whether the site is legitimate. Anyone, including cybercriminals, can get a free HTTPS certificate. Never rely on the padlock alone to judge a site's trustworthiness.",
       flags: [],
     },
     /* ── EMAIL 1 – PayPal (phishing) ── */
@@ -548,15 +548,15 @@ es: {
     /* ── QCM 5 ── */
     {
       id: 5, type: 'qcm',
-      question: "¿Qué es el 'spear phishing'?",
+      question: "¿Un sitio web que muestra un candado (HTTPS) en la barra de direcciones es necesariamente seguro?",
       options: [
-        "Un ataque dirigido y personalizado hacia una persona u organización específica",
-        "Un ataque que apunta a miles de personas al azar",
-        "Un phishing únicamente a través de redes sociales",
-        "Software malicioso transmitido por USB",
+        "Sí, el candado garantiza que el sitio es legítimo e inofensivo",
+        "No, HTTPS solo significa que la conexión está cifrada — un sitio de phishing también puede tener candado",
+        "El candado prueba que la empresa pagó por una certificación de seguridad premium",
+        "Solo los sitios gubernamentales pueden obtener el candado HTTPS",
       ],
-      correct: 0,
-      explanation: "El spear phishing es un ataque sofisticado donde el atacante investiga a su objetivo (nombre, cargo, compañeros, proyectos) para crear un mensaje muy creíble y personalizado. Es mucho más difícil de detectar que el phishing masivo y suele dirigirse a empresas y directivos.",
+      correct: 1,
+      explanation: "El candado HTTPS solo indica que los datos intercambiados entre usted y el sitio están cifrados — no garantiza en absoluto la legitimidad del sitio. Cualquiera, incluidos los ciberdelincuentes, puede obtener gratis un certificado HTTPS. Nunca confíe únicamente en el candado para juzgar la fiabilidad de un sitio.",
       flags: [],
     },
     /* ── EMAIL 1 – PayPal (phishing) ── */

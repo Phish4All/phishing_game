@@ -1,40 +1,40 @@
 # The Phishing Game
 
-Jeu/quiz de sensibilisation au phishing, proposé par [Phish4All](https://www.phish4all.com), hébergé sur GitHub Pages.  
-Disponible en **français**, **anglais** et **espagnol**.
+Phishing awareness game/quiz, brought to you by [Phish4All](https://www.phish4all.com), hosted on GitHub Pages.  
+Available in **French**, **English** and **Spanish**.
 
-🔗 **Jouer en ligne** : https://phish4all.github.io/phishing_game/
+🔗 **Play online**: https://phish4all.github.io/phishing_game/
 
-## Fonctionnalités
+## Features
 
-- 10 questions par partie (mélangées à chaque jeu)
-- 2 formats : **QCM** et **emails simulés** à analyser
-- Explication détaillée après chaque réponse avec les signaux d'alerte
-- Score final avec niveau, conseils pratiques et anneau animé
-- Détection automatique de la langue du navigateur (surclassable via `?lang=`)
-- Responsive mobile
+- 10 questions per game (shuffled every time)
+- 2 formats: **multiple choice** and **simulated emails** to analyze
+- Detailed explanation after each answer with the red flags to spot
+- Final score with level, practical tips and animated ring
+- Automatic browser language detection (overridable via `?lang=`)
+- Mobile responsive
 
 ## Structure
 
 ```
 phishing_game/
-├── index.html        # SPA — 3 écrans : accueil / quiz / résultats
-├── css/style.css     # Thème cybersécurité sombre, responsive
+├── index.html        # SPA — 3 screens: home / quiz / results
+├── css/style.css     # Dark cybersecurity theme, responsive
 ├── js/
-│   ├── app.js        # Logique du jeu, i18n, mélange aléatoire, score
-│   └── locales.js    # Traductions + questions (FR / EN / ES)
-└── .nojekyll         # Désactive Jekyll sur GitHub Pages
+│   ├── app.js        # Game logic, i18n, random shuffling, scoring
+│   └── locales.js    # Translations + questions (FR / EN / ES)
+└── .nojekyll         # Disables Jekyll on GitHub Pages
 ```
 
-## Déploiement sur GitHub Pages
+## Deploying to GitHub Pages
 
-1. Pushez le repo sur GitHub
-2. Dans **Settings → Pages**, sélectionnez la branche `main` et le dossier racine `/`
-3. Le jeu est accessible à `https://<votre-user>.github.io/<nom-du-repo>/`
+1. Push the repo to GitHub
+2. In **Settings → Pages**, select the `main` branch and the root folder `/`
+3. The game is available at `https://<your-user>.github.io/<repo-name>/`
 
-## Paramètre de langue dans l'URL
+## Language URL parameter
 
-Ajoutez `?lang=` à l'URL pour forcer une langue, quelle que soit celle du navigateur :
+Add `?lang=` to the URL to force a language regardless of the browser's:
 
 ```
 https://example.github.io/phishing-game/?lang=fr
@@ -42,60 +42,60 @@ https://example.github.io/phishing-game/?lang=en
 https://example.github.io/phishing-game/?lang=es
 ```
 
-Valeurs acceptées : `fr`, `en`, `es`. Tout autre valeur est ignorée et la langue du navigateur est utilisée.
+Accepted values: `fr`, `en`, `es`. Any other value is ignored and the browser's language is used.
 
-## Mode embarqué (masquer la sélection de langue et le footer)
+## Embedded mode (hide the language selector and the footer)
 
-Ajoutez `?embed=1` à l'URL pour masquer la barre de sélection de langue et le footer (utile pour intégrer le jeu dans une iframe ou une page tierce) :
+Add `?embed=1` to the URL to hide the language selector bar and the footer (useful when embedding the game in an iframe or a third-party page):
 
 ```
 https://phish4all.github.io/phishing_game/?embed=1
 ```
 
-Combinable avec `?lang=` : `?lang=en&embed=1`.
+Combinable with `?lang=`: `?lang=en&embed=1`.
 
-## Développement local
+## Local development
 
-Ouvrez simplement `index.html` dans un navigateur — aucun serveur ni dépendance nécessaire.
+Just open `index.html` in a browser — no server or dependencies required.
 
-## Ajouter des questions
+## Adding questions
 
-Éditez `js/locales.js`. Chaque question suit l'un de ces deux formats :
+Edit `js/locales.js`. Each question follows one of these two formats:
 
-**QCM**
+**Multiple choice**
 ```js
 {
   id: 11, type: 'qcm',
-  question: "Votre question ?",
+  question: "Your question?",
   options: ["Option A", "Option B", "Option C", "Option D"],
-  correct: 0,           // index de la bonne réponse (0-3)
-  explanation: "Explication affichée après la réponse.",
+  correct: 0,           // index of the correct answer (0-3)
+  explanation: "Explanation shown after the answer.",
   flags: [],
 }
 ```
 
-**Email simulé**
+**Simulated email**
 ```js
 {
   id: 12, type: 'email', is_phishing: true,
   email: {
-    from_name: "Nom affiché",
-    from_address: "fake@domaine-suspect.com",
-    to: "victime@email.com",
-    subject: "Objet de l'email",
-    body: "Corps du message\navec sauts de ligne.",
-    cta_text: "Texte du bouton",
-    cta_url: "http://lien-suspect.com/page",
+    from_name: "Display name",
+    from_address: "fake@suspicious-domain.com",
+    to: "victim@email.com",
+    subject: "Email subject",
+    body: "Message body\nwith line breaks.",
+    cta_text: "Button text",
+    cta_url: "http://suspicious-link.com/page",
   },
-  explanation: "Pourquoi c'est du phishing.",
+  explanation: "Why this is phishing.",
   flags: [
-    { type: 'red',   text: "Signal d'alerte 1" },
-    { type: 'green', text: "Bon signe (pour un email légitime)" },
+    { type: 'red',   text: "Red flag 1" },
+    { type: 'green', text: "Good sign (for a legitimate email)" },
   ],
 }
 ```
 
-## Langues
+## Languages
 
-Les traductions sont dans l'objet `LOCALES` de `js/locales.js`, une clé par langue (`fr`, `en`, `es`).  
-Pour ajouter une langue, créez une nouvelle clé avec les mêmes champs `ui` et `questions`, puis ajoutez un bouton dans le `<div class="lang-bar">` de `index.html`.
+Translations live in the `LOCALES` object in `js/locales.js`, one key per language (`fr`, `en`, `es`).  
+To add a language, create a new key with the same `ui` and `questions` fields, then add a button to the `<div class="lang-bar">` in `index.html`.

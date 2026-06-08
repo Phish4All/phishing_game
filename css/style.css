@@ -144,6 +144,10 @@ body::before {
 .stat-num   { display: block; font-size: 1.4rem; font-weight: 700; color: var(--accent); line-height: 1.2; }
 .stat-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
 
+.embed-mode .lang-bar,
+.embed-mode .site-footer {
+  display: none;
+}
 .site-footer {
   position: fixed;
   bottom: 0; left: 0; right: 0;

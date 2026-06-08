@@ -41,11 +41,14 @@ function applyI18n() {
 }
 
 function init() {
-  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  const params = new URLSearchParams(window.location.search);
+  const urlLang = params.get('lang');
   const browserLang = (navigator.language || '').split('-')[0];
   const supported = ['fr', 'en', 'es'];
   if (supported.includes(urlLang)) state.lang = urlLang;
   else if (supported.includes(browserLang)) state.lang = browserLang;
+
+  if (params.get('embed') === '1') document.body.classList.add('embed-mode');
 
   applyI18n();
 

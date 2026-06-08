@@ -3,6 +3,8 @@
 Jeu/quiz de sensibilisation au phishing, proposé par [Phish4All](https://www.phish4all.com), hébergé sur GitHub Pages.  
 Disponible en **français**, **anglais** et **espagnol**.
 
+🔗 **Jouer en ligne** : https://phish4all.github.io/phishing_game/
+
 ## Fonctionnalités
 
 - 10 questions par partie (mélangées à chaque jeu)
@@ -41,6 +43,16 @@ https://example.github.io/phishing-game/?lang=es
 ```
 
 Valeurs acceptées : `fr`, `en`, `es`. Tout autre valeur est ignorée et la langue du navigateur est utilisée.
+
+## Mode embarqué (masquer la sélection de langue et le footer)
+
+Ajoutez `?embed=1` à l'URL pour masquer la barre de sélection de langue et le footer (utile pour intégrer le jeu dans une iframe ou une page tierce) :
+
+```
+https://phish4all.github.io/phishing_game/?embed=1
+```
+
+Combinable avec `?lang=` : `?lang=en&embed=1`.
 
 ## Développement local
 

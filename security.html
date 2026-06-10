@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Évaluer ma sécurité</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="welcome-card" style="max-width:720px;margin:48px auto;">
+      <h1 class="welcome-title">Évaluez votre protection en ligne</h1>
+      <p class="welcome-subtitle">Répondez rapidement à ces questions pour mesurer votre niveau de protection.</p>
+
+      <div id="sec-questions" class="sec-questions">
+        <!-- questions rendered by js/security.js -->
+      </div>
+
+      <div style="margin-top:20px;display:flex;gap:8px;">
+        <button class="btn-primary" id="btn-submit">Voir mes conseils</button>
+        <a href="index.html" class="btn-outline">Retour au quiz</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <span class="footer-title">Le Jeu du Phishing</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.phish4all.com" target="_blank" rel="noopener" class="footer-logo-link">
+      <img src="assets/logo_white.svg" alt="Phish4All" class="p4a-logo">
+    </a>
+  </footer>
+
+  <script src="js/locales.js"></script>
+  <script src="js/security.js"></script>
+</body>
+</html>

@@ -65,8 +65,10 @@ function init() {
   document.getElementById('btn-home').addEventListener('click', () => showScreen('screen-welcome'));
 }
 
+const QUIZ_LENGTH = 10;
+
 function startQuiz() {
-  state.questions = shuffle(LOCALES[state.lang].questions);
+  state.questions = shuffle(LOCALES[state.lang].questions).slice(0, QUIZ_LENGTH);
   state.current = 0;
   state.score = 0;
   state.answered = false;

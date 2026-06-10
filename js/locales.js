@@ -221,6 +221,195 @@ fr: {
         { type: 'red', text: "Microsoft n'envoie jamais ce type de menace par email" },
       ],
     },
+    /* ── QCM 6 ── */
+    {
+      id: 11, type: 'qcm',
+      question: "Vous recevez un email avec une pièce jointe nommée 'Facture_impayee.docm' qui vous demande d'activer les macros pour l'afficher correctement. Que faites-vous ?",
+      options: [
+        "Vous l'ouvrez et activez les macros, c'est sûrement important",
+        "Vous l'ouvrez sans activer les macros pour vérifier le contenu",
+        "Vous ne l'ouvrez pas et supprimez l'email : les macros dans une pièce jointe inattendue sont un signal d'alerte classique",
+        "Vous transférez la pièce jointe à un collègue pour avoir son avis",
+      ],
+      correct: 2,
+      explanation: "Les fichiers Office avec macros (.docm, .xlsm) sont une méthode très répandue pour installer des logiciels malveillants. Activer les macros à la demande d'un email inattendu permet au code malveillant de s'exécuter sur votre machine. Ne jamais activer les macros sur une pièce jointe non sollicitée, et signalez l'email à votre service IT.",
+      flags: [],
+    },
+    /* ── QCM 7 ── */
+    {
+      id: 12, type: 'qcm',
+      question: "Un email affiche 'Service Client Banque Populaire <support@bp-info-system24.ru>' comme expéditeur. Que devez-vous regarder en priorité ?",
+      options: [
+        "Le nom affiché 'Service Client Banque Populaire', qui semble officiel",
+        "L'adresse email réelle après le '@' : 'bp-info-system24.ru' n'a aucun rapport avec la banque",
+        "La présence d'un logo dans la signature de l'email",
+        "Le ton poli et professionnel du message",
+      ],
+      correct: 1,
+      explanation: "Le nom affiché d'un expéditeur peut être modifié librement par l'attaquant — il ne prouve rien. Seule l'adresse email complète après le '@' indique le véritable expéditeur. Ici, le domaine '.ru' n'a aucun lien avec une banque française, ce qui trahit une usurpation.",
+      flags: [],
+    },
+    /* ── QCM 8 ── */
+    {
+      id: 13, type: 'qcm',
+      question: "En quelques minutes, votre téléphone reçoit dix notifications de validation de connexion (double authentification) alors que vous n'essayez pas de vous connecter. Quelle est la bonne réaction ?",
+      options: [
+        "Vous finissez par accepter une notification pour que ça s'arrête",
+        "Vous refusez toutes les demandes, changez immédiatement votre mot de passe et signalez l'incident",
+        "Vous ignorez les notifications, elles vont finir par s'arrêter toutes seules",
+        "Vous appelez le numéro indiqué dans la notification pour vérifier",
+      ],
+      correct: 1,
+      explanation: "Cette technique s'appelle le 'MFA fatigue' (ou bombing) : un attaquant qui possède déjà votre mot de passe envoie de multiples demandes d'authentification dans l'espoir que vous en acceptiez une par lassitude ou erreur. Refusez systématiquement, changez votre mot de passe immédiatement et alertez votre service de sécurité — quelqu'un connaît déjà vos identifiants.",
+      flags: [],
+    },
+    /* ── QCM 9 ── */
+    {
+      id: 14, type: 'qcm',
+      question: "Vous recevez un email vous annonçant que vous avez gagné 50 000 € à une loterie internationale à laquelle vous n'avez jamais participé. Comment réagissez-vous ?",
+      options: [
+        "Vous répondez en fournissant vos coordonnées bancaires pour recevoir le gain",
+        "Vous payez les 'frais de dossier' demandés pour débloquer le virement",
+        "Vous supprimez l'email : on ne gagne jamais à un jeu auquel on n'a pas joué",
+        "Vous transférez l'email à vos proches au cas où ce serait vrai",
+      ],
+      correct: 2,
+      explanation: "Une règle simple : on ne peut pas gagner à une loterie à laquelle on n'a pas participé. Ces escroqueries cherchent à vous faire payer de faux frais ou à voler vos données bancaires en échange d'un gain qui n'existe pas. Si c'est trop beau pour être vrai, c'est que ça ne l'est pas.",
+      flags: [],
+    },
+    /* ── QCM 10 ── */
+    {
+      id: 15, type: 'qcm',
+      question: "Vous réalisez que vous venez de cliquer sur un lien de phishing et d'entrer votre mot de passe sur le faux site. Quelles sont les bonnes actions à faire immédiatement ?",
+      options: [
+        "Ne rien faire et attendre de voir si quelque chose d'anormal se produit",
+        "Changer immédiatement le mot de passe (sur le vrai site), activer la double authentification et prévenir votre service IT/sécurité",
+        "Supprimer l'email reçu pour ne plus y penser",
+        "Redémarrer votre ordinateur, cela suffit à annuler l'action",
+      ],
+      correct: 1,
+      explanation: "Agir vite limite les dégâts : changez immédiatement le mot de passe compromis (et tout autre compte utilisant le même), activez la double authentification, et signalez l'incident à votre service informatique ou de sécurité. Si des informations bancaires ont été saisies, contactez aussi votre banque.",
+      flags: [],
+    },
+    /* ── QCM 11 ── */
+    {
+      id: 16, type: 'qcm',
+      question: "Vous trouvez en ligne une boutique proposant des soldes à -80% sur le site 'boutique-officielle-soldes.shop', dont le nom de domaine a été créé il y a seulement 3 jours. Pourquoi est-ce suspect ?",
+      options: [
+        "Parce que les sites récents sont toujours plus rapides",
+        "Parce qu'un site légitime établi n'aurait normalement pas un nom de domaine aussi récent ni des promotions aussi extrêmes",
+        "Parce que l'extension '.shop' est réservée aux administrations",
+        "Ce n'est pas suspect, un nouveau site peut très bien être fiable dès le premier jour",
+      ],
+      correct: 1,
+      explanation: "Un domaine créé très récemment, combiné à des promotions irréalistes ('-80%'), est un signal classique de site frauduleux créé pour une campagne d'arnaque éphémère. Avant d'acheter, vérifiez les avis indépendants, l'ancienneté du site et privilégiez les enseignes que vous connaissez.",
+      flags: [],
+    },
+    /* ── EMAIL 6 – Fraude au président / BEC (phishing) ── */
+    {
+      id: 17, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Sophie Martin — Directrice Générale",
+        from_address: "s.martin.ceo@gmail.com",
+        to:           "comptabilite@votreentreprise.fr",
+        subject:      "Confidentiel — Virement urgent à effectuer aujourd'hui",
+        body:         "Bonjour,\n\nJe suis actuellement en déplacement et injoignable par téléphone. J'ai besoin que vous traitiez en urgence et en toute confidentialité un virement de 18 500 € vers un nouveau prestataire pour finaliser une acquisition stratégique.\n\nNe communiquez à personne d'autre à ce sujet pour le moment, c'est sensible. Je vous envoie les coordonnées bancaires dans un message séparé.\n\nMerci de confirmer dès que c'est fait.\n\nCordialement,\nSophie Martin",
+        cta_text:     "Répondre à la direction",
+        cta_url:      "mailto:s.martin.ceo@gmail.com",
+      },
+      explanation: "Il s'agit d'une fraude au président (Business Email Compromise). Une vraie directrice générale n'utiliserait jamais une adresse Gmail personnelle pour ordonner un virement, et aucune entreprise sérieuse ne traite des virements importants dans la confidentialité et l'urgence, en contournant les procédures habituelles de validation. Ne traitez jamais ce type de demande sans vérifier par un autre canal (appel téléphonique au numéro habituel, pas celui fourni dans l'email).",
+      flags: [
+        { type: 'red', text: "Adresse '@gmail.com' au lieu du domaine professionnel de l'entreprise" },
+        { type: 'red', text: "Demande de confidentialité absolue qui empêche toute vérification" },
+        { type: 'red', text: "Urgence : virement à effectuer 'aujourd'hui'" },
+        { type: 'red', text: "Contournement des procédures habituelles de validation des paiements" },
+        { type: 'red', text: "Coordonnées bancaires envoyées séparément pour éviter la détection" },
+      ],
+    },
+    /* ── EMAIL 7 – Faux service des impôts (phishing) ── */
+    {
+      id: 18, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Direction Générale des Finances Publiques",
+        from_address: "remboursement@impots-gouv-services.com",
+        to:           "vous@email.com",
+        subject:      "Vous avez droit à un remboursement de 247,80 €",
+        body:         "Madame, Monsieur,\n\nAprès vérification de votre dossier fiscal, nous avons déterminé que vous êtes éligible à un remboursement de 247,80 €.\n\nPour recevoir cette somme sur votre compte bancaire, vous devez confirmer vos coordonnées bancaires (RIB) avant le 15/06/2026. Passé ce délai, la demande sera annulée et la somme reversée au Trésor Public.\n\nVotre dossier de remboursement est prêt et n'attend que votre confirmation.",
+        cta_text:     "Confirmer mes coordonnées bancaires",
+        cta_url:      "http://impots-gouv-services.com/remboursement/confirmation",
+      },
+      explanation: "Le vrai site des impôts français est 'impots.gouv.fr' (domaine officiel en '.gouv.fr'). 'impots-gouv-services.com' est un domaine frauduleux qui imite le nom officiel. L'administration fiscale ne demande jamais de confirmer un RIB par email avec un lien externe — les remboursements se gèrent depuis votre espace personnel officiel.",
+      flags: [
+        { type: 'red', text: "Faux domaine 'impots-gouv-services.com' (le vrai : 'impots.gouv.fr')" },
+        { type: 'red', text: "Demande de RIB par email avec un lien externe" },
+        { type: 'red', text: "Date limite courte avec menace d'annulation du remboursement" },
+        { type: 'red', text: "URL en HTTP non sécurisé" },
+        { type: 'red', text: "L'administration fiscale communique via votre espace personnel officiel, jamais par lien email" },
+      ],
+    },
+    /* ── EMAIL 8 – Faux suivi de colis (phishing) ── */
+    {
+      id: 19, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Colissimo - Suivi de colis",
+        from_address: "notification@colissimo-tracking-fr.com",
+        to:           "vous@email.com",
+        subject:      "📦 Votre colis est en attente — frais de réexpédition requis",
+        body:         "Bonjour,\n\nNous n'avons pas pu livrer votre colis n° FR294857103 car les frais de réexpédition de 1,99 € n'ont pas été réglés.\n\nVotre colis sera retourné à l'expéditeur sous 24 heures si le paiement n'est pas effectué.\n\nRégularisez votre situation dès maintenant pour recevoir votre colis.",
+        cta_text:     "Payer les frais et débloquer mon colis",
+        cta_url:      "http://colissimo-tracking-fr.com/payment/redirect-fees",
+      },
+      explanation: "Le vrai domaine de Colissimo est 'colissimo.fr' (filiale de La Poste). 'colissimo-tracking-fr.com' est un faux domaine. Ce type d'arnaque, très répandu, vise à voler vos données bancaires via un faux paiement de quelques euros — le montant modeste est volontaire pour endormir la méfiance. Un transporteur ne demande jamais de micro-paiement par email pour livrer un colis.",
+      flags: [
+        { type: 'red', text: "Faux domaine 'colissimo-tracking-fr.com' (le vrai : 'colissimo.fr')" },
+        { type: 'red', text: "Demande de paiement de 'frais de réexpédition' inhabituelle pour un colis" },
+        { type: 'red', text: "Montant volontairement faible (1,99 €) pour réduire la méfiance" },
+        { type: 'red', text: "Urgence : 24 heures avant retour à l'expéditeur" },
+        { type: 'red', text: "URL en HTTP non sécurisé" },
+      ],
+    },
+    /* ── EMAIL 9 – Faux Netflix (phishing) ── */
+    {
+      id: 20, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Netflix",
+        from_address: "compte@netflix-paiement-client.com",
+        to:           "vous@email.com",
+        subject:      "Votre abonnement a été suspendu — moyen de paiement refusé",
+        body:         "Bonjour,\n\nNous n'avons pas pu traiter le paiement de votre abonnement. Votre compte a été temporairement suspendu.\n\nPour continuer à profiter de vos séries et films préférés sans interruption, merci de mettre à jour vos informations de paiement dans les 24 heures.\n\nAprès ce délai, votre compte et votre historique seront définitivement supprimés.",
+        cta_text:     "Mettre à jour mon moyen de paiement",
+        cta_url:      "http://netflix-paiement-client.com/update-billing",
+      },
+      explanation: "Le vrai domaine de Netflix est 'netflix.com'. 'netflix-paiement-client.com' est un domaine frauduleux conçu pour voler vos données de carte bancaire. Netflix ne supprime jamais votre compte ni votre historique en 24 heures, et vous invite toujours à gérer votre paiement directement depuis l'application ou le site officiel.",
+      flags: [
+        { type: 'red', text: "Faux domaine 'netflix-paiement-client.com' (le vrai : 'netflix.com')" },
+        { type: 'red', text: "Urgence : 24 heures avant suppression définitive du compte" },
+        { type: 'red', text: "URL en HTTP non sécurisé" },
+        { type: 'red', text: "Lien externe pour 'mettre à jour' un moyen de paiement, au lieu de passer par l'app/le site officiel" },
+        { type: 'red', text: "Menace de perte définitive (compte et historique)" },
+      ],
+    },
+    /* ── EMAIL 10 – Partage Google Docs (légitime) ── */
+    {
+      id: 21, type: 'email', is_phishing: false,
+      email: {
+        from_name:    "Google Docs",
+        from_address: "drive-shares-noreply@google.com",
+        to:           "vous@email.com",
+        subject:      "Camille Durand a partagé un document avec vous : « Plan projet Q3 »",
+        body:         "Camille Durand (camille.durand@votreentreprise.fr) a partagé le document suivant avec vous :\n\n« Plan projet Q3 »\n\nCe document se trouve dans Google Drive, le service de stockage et de partage de fichiers de Google.\n\nVous pouvez l'ouvrir directement depuis votre compte Google.",
+        cta_text:     "Ouvrir dans Google Docs",
+        cta_url:      "https://docs.google.com/document/d/1aBcD3FgHiJkLmNoPqRsTuVwXyZ/edit",
+      },
+      explanation: "Cet email est légitime. Il provient bien du domaine officiel 'google.com', mentionne le nom et l'adresse professionnelle réelle de la personne qui partage le document, et le lien pointe vers 'docs.google.com' — le vrai service Google Docs. Aucune urgence, aucune demande d'identifiants : c'est une notification de partage standard.",
+      flags: [
+        { type: 'green', text: "Domaine officiel de l'expéditeur : 'google.com'" },
+        { type: 'green', text: "Nom et adresse professionnelle vérifiables de la personne qui partage" },
+        { type: 'green', text: "Lien pointant vers 'docs.google.com', le vrai service Google" },
+        { type: 'green', text: "Aucune demande d'identifiants ni d'informations personnelles" },
+        { type: 'green', text: "Aucun sentiment d'urgence ni de menace" },
+      ],
+    },
   ],
 },
 
@@ -442,6 +631,195 @@ en: {
         { type: 'red', text: "Microsoft never sends this type of threat by email" },
       ],
     },
+    /* ── QCM 6 ── */
+    {
+      id: 11, type: 'qcm',
+      question: "You receive an email with an attachment named 'Unpaid_invoice.docm' asking you to enable macros to display it correctly. What do you do?",
+      options: [
+        "You open it and enable macros, it's probably important",
+        "You open it without enabling macros to check the content",
+        "You don't open it and delete the email: macros in an unexpected attachment are a classic red flag",
+        "You forward the attachment to a colleague for their opinion",
+      ],
+      correct: 2,
+      explanation: "Office files with macros (.docm, .xlsm) are a very common way to install malware. Enabling macros at the request of an unexpected email lets malicious code run on your machine. Never enable macros on an unsolicited attachment, and report the email to your IT department.",
+      flags: [],
+    },
+    /* ── QCM 7 ── */
+    {
+      id: 12, type: 'qcm',
+      question: "An email shows 'Bank Customer Service <support@bp-info-system24.ru>' as the sender. What should you check first?",
+      options: [
+        "The display name 'Bank Customer Service', which looks official",
+        "The actual email address after the '@': 'bp-info-system24.ru' has nothing to do with the bank",
+        "Whether there is a logo in the email signature",
+        "The polite, professional tone of the message",
+      ],
+      correct: 1,
+      explanation: "An attacker can freely set the sender's display name — it proves nothing. Only the full email address after the '@' reveals the real sender. Here, the '.ru' domain has no connection to a bank, which gives away the spoofing.",
+      flags: [],
+    },
+    /* ── QCM 8 ── */
+    {
+      id: 13, type: 'qcm',
+      question: "Within a few minutes, your phone receives ten login approval (multi-factor authentication) prompts even though you're not trying to sign in. What's the right reaction?",
+      options: [
+        "You eventually approve one just to make it stop",
+        "You deny every request, change your password immediately, and report the incident",
+        "You ignore the notifications, they'll eventually stop on their own",
+        "You call the number shown in the notification to check",
+      ],
+      correct: 1,
+      explanation: "This technique is called 'MFA fatigue' (or MFA bombing): an attacker who already has your password sends repeated authentication prompts hoping you'll approve one out of annoyance or by mistake. Always deny, change your password immediately, and alert your security team — someone already knows your credentials.",
+      flags: [],
+    },
+    /* ── QCM 9 ── */
+    {
+      id: 14, type: 'qcm',
+      question: "You receive an email announcing that you've won €50,000 in an international lottery you never entered. How do you react?",
+      options: [
+        "You reply with your bank details to receive the prize",
+        "You pay the requested 'processing fees' to release the transfer",
+        "You delete the email: you can't win a draw you never entered",
+        "You forward the email to your friends and family just in case it's real",
+      ],
+      correct: 2,
+      explanation: "A simple rule: you can't win a lottery you never entered. These scams aim to make you pay fake fees or steal your banking details in exchange for a prize that doesn't exist. If it sounds too good to be true, it is.",
+      flags: [],
+    },
+    /* ── QCM 10 ── */
+    {
+      id: 15, type: 'qcm',
+      question: "You realise you've just clicked a phishing link and entered your password on the fake site. What should you do immediately?",
+      options: [
+        "Do nothing and wait to see if anything unusual happens",
+        "Immediately change the compromised password (on the real site), enable multi-factor authentication, and notify your IT/security team",
+        "Delete the email so you don't have to think about it anymore",
+        "Restart your computer — that's enough to undo the action",
+      ],
+      correct: 1,
+      explanation: "Acting fast limits the damage: change the compromised password right away (and any other account using the same one), enable multi-factor authentication, and report the incident to your IT or security team. If banking details were entered, contact your bank too.",
+      flags: [],
+    },
+    /* ── QCM 11 ── */
+    {
+      id: 16, type: 'qcm',
+      question: "You find an online shop offering 80%-off sales at 'official-outlet-deals.shop', whose domain name was registered just 3 days ago. Why is this suspicious?",
+      options: [
+        "Because newer sites are always faster",
+        "Because an established legitimate business wouldn't normally have such a brand-new domain name or such extreme discounts",
+        "Because the '.shop' extension is reserved for government sites",
+        "It isn't suspicious — a new site can be perfectly trustworthy from day one",
+      ],
+      correct: 1,
+      explanation: "A very recently registered domain combined with unrealistic discounts ('-80%') is a classic sign of a fraudulent site set up for a short-lived scam campaign. Before buying, check independent reviews, the site's age, and prefer retailers you already know.",
+      flags: [],
+    },
+    /* ── EMAIL 6 – CEO fraud / BEC (phishing) ── */
+    {
+      id: 17, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Sarah Mitchell — Chief Executive Officer",
+        from_address: "s.mitchell.ceo@gmail.com",
+        to:           "accounts@yourcompany.com",
+        subject:      "Confidential — Urgent transfer needed today",
+        body:         "Hi,\n\nI'm currently travelling and can't be reached by phone. I need you to urgently and confidentially process a transfer of £18,500 to a new supplier to finalise a strategic acquisition.\n\nPlease don't discuss this with anyone else for now, it's sensitive. I'll send you the bank details in a separate message.\n\nPlease confirm once it's done.\n\nKind regards,\nSarah Mitchell",
+        cta_text:     "Reply to management",
+        cta_url:      "mailto:s.mitchell.ceo@gmail.com",
+      },
+      explanation: "This is CEO fraud (Business Email Compromise). A real CEO would never use a personal Gmail address to order a transfer, and no serious company processes large transfers in secrecy and urgency, bypassing normal validation procedures. Never act on this kind of request without verifying through another channel (a phone call to the usual number, not one provided in the email).",
+      flags: [
+        { type: 'red', text: "'@gmail.com' address instead of the company's professional domain" },
+        { type: 'red', text: "Demand for absolute confidentiality that prevents any verification" },
+        { type: 'red', text: "Urgency: transfer must be done 'today'" },
+        { type: 'red', text: "Bypassing the usual payment validation procedures" },
+        { type: 'red', text: "Bank details sent separately to avoid detection" },
+      ],
+    },
+    /* ── EMAIL 7 – Fake tax authority (phishing) ── */
+    {
+      id: 18, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "HM Revenue & Customs",
+        from_address: "refunds@hmrc-tax-services.com",
+        to:           "you@email.com",
+        subject:      "You are entitled to a tax refund of £247.80",
+        body:         "Dear taxpayer,\n\nAfter reviewing your tax file, we have determined that you are eligible for a refund of £247.80.\n\nTo receive this amount in your bank account, you must confirm your banking details before 15/06/2026. After this deadline, the request will be cancelled and the amount returned to the Treasury.\n\nYour refund file is ready and only awaits your confirmation.",
+        cta_text:     "Confirm my banking details",
+        cta_url:      "http://hmrc-tax-services.com/refund/confirmation",
+      },
+      explanation: "The real website of the UK tax authority is 'gov.uk' (official '.gov.uk' domain). 'hmrc-tax-services.com' is a fraudulent domain mimicking the official name. Tax authorities never ask you to confirm bank details by email with an external link — refunds are managed through your official online account.",
+      flags: [
+        { type: 'red', text: "Fake domain 'hmrc-tax-services.com' (the real one uses '.gov.uk')" },
+        { type: 'red', text: "Request for bank details by email with an external link" },
+        { type: 'red', text: "Short deadline with threat of cancelling the refund" },
+        { type: 'red', text: "Insecure HTTP URL" },
+        { type: 'red', text: "Tax authorities communicate via your official online account, never via an email link" },
+      ],
+    },
+    /* ── EMAIL 8 – Fake parcel tracking (phishing) ── */
+    {
+      id: 19, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "DHL - Parcel Tracking",
+        from_address: "notification@dhl-tracking-redelivery.com",
+        to:           "you@email.com",
+        subject:      "📦 Your parcel is on hold — redelivery fee required",
+        body:         "Hello,\n\nWe were unable to deliver your parcel #DH294857103 because the redelivery fee of £1.99 has not been paid.\n\nYour parcel will be returned to the sender within 24 hours if payment is not made.\n\nSettle this now to receive your parcel.",
+        cta_text:     "Pay the fee and release my parcel",
+        cta_url:      "http://dhl-tracking-redelivery.com/payment/redirect-fees",
+      },
+      explanation: "DHL's real domain is 'dhl.com'. 'dhl-tracking-redelivery.com' is a fake domain. This very common scam aims to steal your banking details through a fake payment of just a few pounds — the small amount is deliberate, designed to lower your guard. A carrier never asks for a micro-payment by email to deliver a parcel.",
+      flags: [
+        { type: 'red', text: "Fake domain 'dhl-tracking-redelivery.com' (the real one: 'dhl.com')" },
+        { type: 'red', text: "Unusual request to pay a 'redelivery fee' for a parcel" },
+        { type: 'red', text: "Deliberately small amount (£1.99) to reduce suspicion" },
+        { type: 'red', text: "Urgency: 24 hours before the parcel is returned to sender" },
+        { type: 'red', text: "Insecure HTTP URL" },
+      ],
+    },
+    /* ── EMAIL 9 – Fake Netflix (phishing) ── */
+    {
+      id: 20, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Netflix",
+        from_address: "account@netflix-billing-update.com",
+        to:           "you@email.com",
+        subject:      "Your subscription has been suspended — payment method declined",
+        body:         "Hello,\n\nWe were unable to process payment for your subscription. Your account has been temporarily suspended.\n\nTo keep enjoying your favourite shows and movies without interruption, please update your payment information within 24 hours.\n\nAfter this deadline, your account and viewing history will be permanently deleted.",
+        cta_text:     "Update my payment method",
+        cta_url:      "http://netflix-billing-update.com/update-billing",
+      },
+      explanation: "Netflix's real domain is 'netflix.com'. 'netflix-billing-update.com' is a fraudulent domain designed to steal your card details. Netflix never deletes your account or viewing history within 24 hours, and always invites you to manage your payment directly from the app or official website.",
+      flags: [
+        { type: 'red', text: "Fake domain 'netflix-billing-update.com' (the real one: 'netflix.com')" },
+        { type: 'red', text: "Urgency: 24 hours before permanent account deletion" },
+        { type: 'red', text: "Insecure HTTP URL" },
+        { type: 'red', text: "External link to 'update' a payment method instead of going through the official app/site" },
+        { type: 'red', text: "Threat of permanent loss (account and history)" },
+      ],
+    },
+    /* ── EMAIL 10 – Google Docs share (legitimate) ── */
+    {
+      id: 21, type: 'email', is_phishing: false,
+      email: {
+        from_name:    "Google Docs",
+        from_address: "drive-shares-noreply@google.com",
+        to:           "you@email.com",
+        subject:      "Alex Carter shared a document with you: \"Q3 project plan\"",
+        body:         "Alex Carter (alex.carter@yourcompany.com) shared the following document with you:\n\n\"Q3 project plan\"\n\nThis document is in Google Drive, Google's file storage and sharing service.\n\nYou can open it directly from your Google account.",
+        cta_text:     "Open in Google Docs",
+        cta_url:      "https://docs.google.com/document/d/1aBcD3FgHiJkLmNoPqRsTuVwXyZ/edit",
+      },
+      explanation: "This email is legitimate. It genuinely comes from the official 'google.com' domain, mentions the real name and work address of the person sharing the document, and the link points to 'docs.google.com' — the real Google Docs service. No urgency, no request for credentials: it's a standard sharing notification.",
+      flags: [
+        { type: 'green', text: "Official sender domain: 'google.com'" },
+        { type: 'green', text: "Verifiable name and work address of the person sharing" },
+        { type: 'green', text: "Link pointing to 'docs.google.com', the real Google service" },
+        { type: 'green', text: "No request for credentials or personal information" },
+        { type: 'green', text: "No sense of urgency or threat" },
+      ],
+    },
   ],
 },
 
@@ -661,6 +1039,195 @@ es: {
         { type: 'red', text: "HTTP inseguro en lugar de HTTPS" },
         { type: 'red', text: "Urgencia: 12 horas y amenaza de eliminación permanente de datos" },
         { type: 'red', text: "Microsoft nunca envía este tipo de amenaza por email" },
+      ],
+    },
+    /* ── QCM 6 ── */
+    {
+      id: 11, type: 'qcm',
+      question: "Recibes un email con un archivo adjunto llamado 'Factura_impagada.docm' que te pide activar las macros para mostrarlo correctamente. ¿Qué haces?",
+      options: [
+        "Lo abres y activas las macros, seguro que es importante",
+        "Lo abres sin activar las macros para comprobar el contenido",
+        "No lo abres y eliminas el email: las macros en un adjunto inesperado son una señal de alarma clásica",
+        "Reenvías el adjunto a un compañero para que te dé su opinión",
+      ],
+      correct: 2,
+      explanation: "Los archivos de Office con macros (.docm, .xlsm) son un método muy habitual para instalar malware. Activar las macros a petición de un email inesperado permite que el código malicioso se ejecute en tu equipo. Nunca actives las macros en un adjunto no solicitado, e informa del email a tu departamento de IT.",
+      flags: [],
+    },
+    /* ── QCM 7 ── */
+    {
+      id: 12, type: 'qcm',
+      question: "Un email muestra 'Atención al Cliente del Banco <support@bp-info-system24.ru>' como remitente. ¿Qué deberías mirar primero?",
+      options: [
+        "El nombre mostrado 'Atención al Cliente del Banco', que parece oficial",
+        "La dirección de email real tras la '@': 'bp-info-system24.ru' no tiene relación alguna con el banco",
+        "La presencia de un logotipo en la firma del email",
+        "El tono educado y profesional del mensaje",
+      ],
+      correct: 1,
+      explanation: "El nombre mostrado de un remitente puede ser modificado libremente por el atacante — no demuestra nada. Solo la dirección de email completa tras la '@' revela al verdadero remitente. Aquí, el dominio '.ru' no tiene ninguna relación con un banco, lo que delata la suplantación.",
+      flags: [],
+    },
+    /* ── QCM 8 ── */
+    {
+      id: 13, type: 'qcm',
+      question: "En pocos minutos, tu teléfono recibe diez notificaciones de validación de inicio de sesión (doble factor) sin que estés intentando conectarte. ¿Cuál es la reacción correcta?",
+      options: [
+        "Acabas aceptando una notificación para que pare de una vez",
+        "Rechazas todas las solicitudes, cambias tu contraseña de inmediato y reportas el incidente",
+        "Ignoras las notificaciones, terminarán por detenerse solas",
+        "Llamas al número que aparece en la notificación para comprobarlo",
+      ],
+      correct: 1,
+      explanation: "Esta técnica se llama 'fatiga de MFA' (o bombing): un atacante que ya tiene tu contraseña envía múltiples solicitudes de autenticación con la esperanza de que aceptes una por cansancio o error. Recházalas siempre, cambia tu contraseña de inmediato y avisa a tu equipo de seguridad — alguien ya conoce tus credenciales.",
+      flags: [],
+    },
+    /* ── QCM 9 ── */
+    {
+      id: 14, type: 'qcm',
+      question: "Recibes un email anunciando que has ganado 50.000 € en una lotería internacional en la que nunca participaste. ¿Cómo reaccionas?",
+      options: [
+        "Respondes facilitando tus datos bancarios para recibir el premio",
+        "Pagas los 'gastos de gestión' solicitados para liberar la transferencia",
+        "Eliminas el email: nunca se gana un sorteo en el que no se ha participado",
+        "Reenvías el email a tus seres queridos por si fuera cierto",
+      ],
+      correct: 2,
+      explanation: "Una regla simple: no se puede ganar una lotería en la que no se ha participado. Estas estafas buscan que pagues falsos gastos o robar tus datos bancarios a cambio de un premio que no existe. Si suena demasiado bueno para ser verdad, es que no lo es.",
+      flags: [],
+    },
+    /* ── QCM 10 ── */
+    {
+      id: 15, type: 'qcm',
+      question: "Te das cuenta de que acabas de hacer clic en un enlace de phishing e introducir tu contraseña en el sitio falso. ¿Qué debes hacer de inmediato?",
+      options: [
+        "No hacer nada y esperar a ver si ocurre algo extraño",
+        "Cambiar de inmediato la contraseña (en el sitio real), activar la doble autenticación y avisar a tu equipo de IT/seguridad",
+        "Eliminar el email recibido para no pensar más en ello",
+        "Reiniciar tu ordenador, eso basta para anular la acción",
+      ],
+      correct: 1,
+      explanation: "Actuar rápido limita el daño: cambia de inmediato la contraseña comprometida (y cualquier otra cuenta que use la misma), activa la doble autenticación y reporta el incidente a tu equipo de informática o seguridad. Si introdujiste datos bancarios, contacta también con tu banco.",
+      flags: [],
+    },
+    /* ── QCM 11 ── */
+    {
+      id: 16, type: 'qcm',
+      question: "Encuentras una tienda online que ofrece rebajas del -80% en el sitio 'tienda-oficial-ofertas.shop', cuyo dominio se registró hace solo 3 días. ¿Por qué resulta sospechoso?",
+      options: [
+        "Porque los sitios recientes siempre son más rápidos",
+        "Porque un negocio legítimo y establecido normalmente no tendría un dominio tan reciente ni promociones tan extremas",
+        "Porque la extensión '.shop' está reservada para administraciones públicas",
+        "No es sospechoso, un sitio nuevo puede ser perfectamente fiable desde el primer día",
+      ],
+      correct: 1,
+      explanation: "Un dominio registrado hace muy poco, combinado con descuentos poco realistas ('-80%'), es una señal clásica de sitio fraudulento creado para una campaña de estafa efímera. Antes de comprar, consulta opiniones independientes, la antigüedad del sitio y prefiere comercios que ya conozcas.",
+      flags: [],
+    },
+    /* ── EMAIL 6 – Fraude del CEO / BEC (phishing) ── */
+    {
+      id: 17, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Sofía Martín — Directora General",
+        from_address: "s.martin.ceo@gmail.com",
+        to:           "contabilidad@tuempresa.es",
+        subject:      "Confidencial — Transferencia urgente a realizar hoy",
+        body:         "Hola,\n\nEstoy de viaje y no puedo atender llamadas. Necesito que proceses con urgencia y de forma confidencial una transferencia de 18.500 € a un nuevo proveedor para cerrar una adquisición estratégica.\n\nNo lo comentes con nadie más por ahora, es delicado. Te enviaré los datos bancarios en un mensaje aparte.\n\nConfírmame en cuanto esté hecho.\n\nUn saludo,\nSofía Martín",
+        cta_text:     "Responder a dirección",
+        cta_url:      "mailto:s.martin.ceo@gmail.com",
+      },
+      explanation: "Se trata de una fraude del CEO (Business Email Compromise). Una verdadera directora general nunca usaría una dirección de Gmail personal para ordenar una transferencia, y ninguna empresa seria gestiona transferencias importantes con confidencialidad y urgencia, saltándose los procedimientos habituales de validación. Nunca proceses este tipo de solicitud sin verificarla por otro canal (una llamada al número habitual, no al que aparece en el email).",
+      flags: [
+        { type: 'red', text: "Dirección '@gmail.com' en lugar del dominio profesional de la empresa" },
+        { type: 'red', text: "Solicitud de confidencialidad absoluta que impide cualquier verificación" },
+        { type: 'red', text: "Urgencia: transferencia a realizar 'hoy'" },
+        { type: 'red', text: "Se saltan los procedimientos habituales de validación de pagos" },
+        { type: 'red', text: "Datos bancarios enviados por separado para evitar la detección" },
+      ],
+    },
+    /* ── EMAIL 7 – Falsa Agencia Tributaria (phishing) ── */
+    {
+      id: 18, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Agencia Tributaria",
+        from_address: "devoluciones@agencia-tributaria-online.com",
+        to:           "tu@email.com",
+        subject:      "Tienes derecho a una devolución de 247,80 €",
+        body:         "Estimado/a contribuyente,\n\nTras revisar tu expediente fiscal, hemos determinado que tienes derecho a una devolución de 247,80 €.\n\nPara recibir este importe en tu cuenta bancaria, debes confirmar tus datos bancarios antes del 15/06/2026. Pasado ese plazo, la solicitud será cancelada y el importe devuelto al Tesoro Público.\n\nTu expediente de devolución está listo y solo espera tu confirmación.",
+        cta_text:     "Confirmar mis datos bancarios",
+        cta_url:      "http://agencia-tributaria-online.com/devolucion/confirmacion",
+      },
+      explanation: "El sitio real de la Agencia Tributaria es 'agenciatributaria.gob.es' (dominio oficial en '.gob.es'). 'agencia-tributaria-online.com' es un dominio fraudulento que imita el nombre oficial. La administración tributaria nunca pide confirmar datos bancarios por email con un enlace externo — las devoluciones se gestionan desde tu sede electrónica oficial.",
+      flags: [
+        { type: 'red', text: "Dominio falso 'agencia-tributaria-online.com' (el real: 'agenciatributaria.gob.es')" },
+        { type: 'red', text: "Solicitud de datos bancarios por email con un enlace externo" },
+        { type: 'red', text: "Plazo corto con amenaza de cancelar la devolución" },
+        { type: 'red', text: "URL en HTTP inseguro" },
+        { type: 'red', text: "La administración tributaria se comunica a través de tu sede electrónica oficial, nunca por enlace de email" },
+      ],
+    },
+    /* ── EMAIL 8 – Falso seguimiento de paquete (phishing) ── */
+    {
+      id: 19, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Correos - Seguimiento de paquetes",
+        from_address: "notificacion@correos-seguimiento-es.com",
+        to:           "tu@email.com",
+        subject:      "📦 Tu paquete está retenido — gastos de reenvío pendientes",
+        body:         "Hola,\n\nNo hemos podido entregar tu paquete n.º ES294857103 porque los gastos de reenvío de 1,99 € no se han abonado.\n\nTu paquete será devuelto al remitente en 24 horas si no se realiza el pago.\n\nRegulariza tu situación ahora mismo para recibir tu paquete.",
+        cta_text:     "Pagar los gastos y desbloquear mi paquete",
+        cta_url:      "http://correos-seguimiento-es.com/pago/redireccion-gastos",
+      },
+      explanation: "El dominio real de Correos es 'correos.es'. 'correos-seguimiento-es.com' es un dominio falso. Este tipo de estafa, muy extendida, busca robar tus datos bancarios mediante un falso pago de pocos euros — el importe reducido es deliberado, para reducir tus sospechas. Un transportista nunca pide un micropago por email para entregar un paquete.",
+      flags: [
+        { type: 'red', text: "Dominio falso 'correos-seguimiento-es.com' (el real: 'correos.es')" },
+        { type: 'red', text: "Solicitud de pago de 'gastos de reenvío' inusual para un paquete" },
+        { type: 'red', text: "Importe deliberadamente bajo (1,99 €) para reducir la desconfianza" },
+        { type: 'red', text: "Urgencia: 24 horas antes de la devolución al remitente" },
+        { type: 'red', text: "URL en HTTP inseguro" },
+      ],
+    },
+    /* ── EMAIL 9 – Falso Netflix (phishing) ── */
+    {
+      id: 20, type: 'email', is_phishing: true,
+      email: {
+        from_name:    "Netflix",
+        from_address: "cuenta@netflix-actualizar-pago.com",
+        to:           "tu@email.com",
+        subject:      "Tu suscripción ha sido suspendida — método de pago rechazado",
+        body:         "Hola,\n\nNo hemos podido procesar el pago de tu suscripción. Tu cuenta ha sido suspendida temporalmente.\n\nPara seguir disfrutando de tus series y películas favoritas sin interrupciones, actualiza tus datos de pago en las próximas 24 horas.\n\nPasado ese plazo, tu cuenta y tu historial se eliminarán de forma permanente.",
+        cta_text:     "Actualizar mi método de pago",
+        cta_url:      "http://netflix-actualizar-pago.com/update-billing",
+      },
+      explanation: "El dominio real de Netflix es 'netflix.com'. 'netflix-actualizar-pago.com' es un dominio fraudulento diseñado para robar los datos de tu tarjeta. Netflix nunca elimina tu cuenta ni tu historial en 24 horas, y siempre te invita a gestionar tu pago directamente desde la aplicación o el sitio oficial.",
+      flags: [
+        { type: 'red', text: "Dominio falso 'netflix-actualizar-pago.com' (el real: 'netflix.com')" },
+        { type: 'red', text: "Urgencia: 24 horas antes de la eliminación definitiva de la cuenta" },
+        { type: 'red', text: "URL en HTTP inseguro" },
+        { type: 'red', text: "Enlace externo para 'actualizar' un método de pago, en lugar de usar la app/el sitio oficial" },
+        { type: 'red', text: "Amenaza de pérdida definitiva (cuenta e historial)" },
+      ],
+    },
+    /* ── EMAIL 10 – Compartir en Google Docs (legítimo) ── */
+    {
+      id: 21, type: 'email', is_phishing: false,
+      email: {
+        from_name:    "Google Docs",
+        from_address: "drive-shares-noreply@google.com",
+        to:           "tu@email.com",
+        subject:      "Carmen Ruiz ha compartido un documento contigo: «Plan de proyecto T3»",
+        body:         "Carmen Ruiz (carmen.ruiz@tuempresa.es) ha compartido el siguiente documento contigo:\n\n«Plan de proyecto T3»\n\nEste documento está en Google Drive, el servicio de almacenamiento y uso compartido de archivos de Google.\n\nPuedes abrirlo directamente desde tu cuenta de Google.",
+        cta_text:     "Abrir en Google Docs",
+        cta_url:      "https://docs.google.com/document/d/1aBcD3FgHiJkLmNoPqRsTuVwXyZ/edit",
+      },
+      explanation: "Este email es legítimo. Procede realmente del dominio oficial 'google.com', menciona el nombre y la dirección profesional reales de la persona que comparte el documento, y el enlace apunta a 'docs.google.com' — el verdadero servicio de Google Docs. Sin urgencia, sin solicitud de credenciales: es una notificación de uso compartido estándar.",
+      flags: [
+        { type: 'green', text: "Dominio oficial del remitente: 'google.com'" },
+        { type: 'green', text: "Nombre y dirección profesional verificables de la persona que comparte" },
+        { type: 'green', text: "Enlace que apunta a 'docs.google.com', el verdadero servicio de Google" },
+        { type: 'green', text: "Sin solicitud de credenciales ni información personal" },
+        { type: 'green', text: "Sin sensación de urgencia ni amenazas" },
       ],
     },
   ],

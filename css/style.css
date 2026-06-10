@@ -176,6 +176,14 @@ body::before {
   vertical-align: middle;
 }
 .footer-logo-link:hover .p4a-logo { opacity: 1; }
+.footer-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity .2s;
+}
+.footer-link:hover { opacity: .75; }
 
 /* ── BUTTONS ── */
 .btn-primary {

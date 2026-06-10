@@ -81,6 +81,11 @@ function render() {
   const linkHome = document.getElementById('link-home');
   if (linkHome) linkHome.href = `index.html?lang=${lang}`;
 
+  const elBrought = document.getElementById('footer-brought');
+  if (elBrought) elBrought.textContent = t('brought_by');
+  const elTitle = document.getElementById('footer-title');
+  if (elTitle) elTitle.textContent = t('game_title');
+
   const container = document.getElementById('sec-questions');
   container.innerHTML = `
     <div class="question-card">

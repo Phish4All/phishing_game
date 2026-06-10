@@ -1,5 +1,7 @@
 'use strict';
 
+const state = { lang: 'fr' };
+
 const SEC_TX = {
   fr: {
     q1: 'Utilisez-vous un mot de passe fort ?',
@@ -58,9 +60,26 @@ function getLang() {
   return 'fr';
 }
 
+function t(key) {
+  const val = (typeof LOCALES !== 'undefined' && LOCALES[state.lang] && LOCALES[state.lang].ui && LOCALES[state.lang].ui[key]);
+  return val !== undefined ? val : key;
+}
+
 function render() {
-  const lang = getLang();
+  state.lang = getLang();
+  const lang = state.lang;
   const L = SEC_TX[lang] || SEC_TX.fr;
+
+  // update lang buttons active state
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+
+  // update home link text from global locales if available
+  const btnHome = document.getElementById('btn-home');
+  if (btnHome) btnHome.textContent = t('home_btn') || btnHome.textContent;
+
+  // update link-home href to include lang param
+  const linkHome = document.getElementById('link-home');
+  if (linkHome) linkHome.href = `index.html?lang=${lang}`;
 
   const container = document.getElementById('sec-questions');
   container.innerHTML = `
@@ -115,4 +134,20 @@ function evaluate() {
 document.addEventListener('DOMContentLoaded', () => {
   render();
   document.getElementById('btn-submit').addEventListener('click', evaluate);
+
+  // language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newLang = btn.dataset.lang;
+      state.lang = newLang;
+      // update URL param without reloading
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', newLang);
+      window.history.replaceState({}, '', url);
+      render();
+    });
+  });
+  // ensure index/home link uses current lang
+  const linkHome = document.getElementById('link-home');
+  if (linkHome) linkHome.href = `index.html?lang=${state.lang}`;
 });

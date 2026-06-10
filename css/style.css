@@ -486,6 +486,33 @@ body::before {
 
 .grade-desc { color: var(--muted); font-size: .93rem; margin-bottom: 28px; }
 
+.sec-score-wrap { margin: 18px 0 24px; text-align: center; }
+.sec-score-bar-track {
+  position: relative;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ef4444, #f59e0b 50%, #10b981);
+  margin: 12px 0 6px;
+}
+.sec-score-thumb {
+  position: absolute;
+  top: 50%;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  transition: left .7s cubic-bezier(.4,0,.2,1);
+}
+.sec-score-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: .73rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
 .tips-box {
   text-align: left;
   background: var(--surface2);

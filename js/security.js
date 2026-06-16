@@ -138,9 +138,6 @@ function render() {
 
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
 
-  const btnHome = document.getElementById('btn-home');
-  if (btnHome) btnHome.textContent = t('home_btn') || btnHome.textContent;
-
   const linkHome = document.getElementById('link-home');
   if (linkHome) linkHome.href = `index.html?lang=${lang}`;
 

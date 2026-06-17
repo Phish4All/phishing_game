@@ -4,6 +4,8 @@ const state = { lang: 'fr' };
 
 const SEC_TX = {
   fr: {
+    title: 'Évaluez votre protection en ligne',
+    subtitle: 'Répondez rapidement à ces questions pour mesurer votre niveau de protection.',
     questions: [
       {
         key: 'q1',
@@ -41,6 +43,8 @@ const SEC_TX = {
     submit: 'Voir mes conseils'
   },
   en: {
+    title: 'Evaluate your online protection',
+    subtitle: 'Quickly answer these questions to measure your level of protection.',
     questions: [
       {
         key: 'q1',
@@ -78,6 +82,8 @@ const SEC_TX = {
     submit: 'See my tips'
   },
   es: {
+    title: 'Evalúe su protección en línea',
+    subtitle: 'Responda rápidamente estas preguntas para medir su nivel de protección.',
     questions: [
       {
         key: 'q1',
@@ -137,6 +143,11 @@ function render() {
   const L = SEC_TX[lang] || SEC_TX.fr;
 
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+
+  const elSecTitle = document.getElementById('sec-title');
+  if (elSecTitle) elSecTitle.textContent = L.title;
+  const elSecSubtitle = document.getElementById('sec-subtitle');
+  if (elSecSubtitle) elSecSubtitle.textContent = L.subtitle;
 
   const linkHome = document.getElementById('link-home');
   if (linkHome) {

@@ -49,7 +49,11 @@ function init() {
   else if (supported.includes(browserLang)) state.lang = browserLang;
 
   const embedMode = params.get('embed') === '1';
-  if (embedMode) document.body.classList.add('embed-mode');
+  if (embedMode) {
+    document.body.classList.add('embed-mode');
+    document.querySelector('.lang-bar')?.style.setProperty('display', 'none', 'important');
+    document.querySelector('.site-footer')?.style.setProperty('display', 'none', 'important');
+  }
 
   applyI18n();
 

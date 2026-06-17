@@ -50,9 +50,7 @@ function init() {
 
   const embedMode = params.get('embed') === '1';
   if (embedMode) {
-    document.body.classList.add('embed-mode');
-    document.querySelector('.lang-bar')?.style.setProperty('display', 'none', 'important');
-    document.querySelector('.site-footer')?.style.setProperty('display', 'none', 'important');
+    document.documentElement.classList.add('embed-mode');
   }
 
   applyI18n();

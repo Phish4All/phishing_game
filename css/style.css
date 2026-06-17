@@ -147,7 +147,7 @@ body::before {
 .embed-mode .lang-bar,
 .embed-mode .site-footer,
 .embed-mode #btn-home {
-  display: none;
+  display: none !important;
 }
 .site-footer {
   position: fixed;

@@ -139,7 +139,10 @@ function render() {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
 
   const linkHome = document.getElementById('link-home');
-  if (linkHome) linkHome.href = `index.html?lang=${lang}`;
+  if (linkHome) {
+    linkHome.href = `index.html?lang=${lang}`;
+    linkHome.textContent = t('back_to_quiz');
+  }
 
   const elBrought = document.getElementById('footer-brought');
   if (elBrought) elBrought.textContent = t('brought_by');

@@ -30,6 +30,7 @@ fr: {
     tips_title:      "Conseils pour vous protéger",
     retry_btn:       "🔄 Rejouer",
     home_btn:        "🌐 Changer de langue",
+    back_to_quiz:    "Retour au quiz",
     grades: {
       perfect: { title: "🏆 Expert Cybersécurité !", desc: "Impressionnant ! Vous détectez le phishing comme un professionnel." },
       great:   { title: "⭐ Très bon !",             desc: "Excellente vigilance. Quelques détails à perfectionner." },
@@ -440,6 +441,7 @@ en: {
     tips_title:      "Tips to protect yourself",
     retry_btn:       "🔄 Play again",
     home_btn:        "🌐 Change language",
+    back_to_quiz:    "Back to the quiz",
     grades: {
       perfect: { title: "🏆 Cybersecurity Expert!", desc: "Impressive! You detect phishing like a professional." },
       great:   { title: "⭐ Very good!",            desc: "Excellent vigilance. Just a few details to perfect." },
@@ -850,6 +852,7 @@ es: {
     tips_title:      "Consejos para protegerte",
     retry_btn:       "🔄 Jugar de nuevo",
     home_btn:        "🌐 Cambiar idioma",
+    back_to_quiz:    "Volver al quiz",
     grades: {
       perfect: { title: "🏆 ¡Experto en Ciberseguridad!", desc: "¡Impresionante! Detectas el phishing como un profesional." },
       great:   { title: "⭐ ¡Muy bien!",                  desc: "Excelente vigilancia. Solo algunos detalles a perfeccionar." },

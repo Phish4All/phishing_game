@@ -48,7 +48,8 @@ function init() {
   if (supported.includes(urlLang)) state.lang = urlLang;
   else if (supported.includes(browserLang)) state.lang = browserLang;
 
-  if (params.get('embed') === '1') document.body.classList.add('embed-mode');
+  const embedMode = params.get('embed') === '1';
+  if (embedMode) document.body.classList.add('embed-mode');
 
   applyI18n();
 
@@ -61,8 +62,10 @@ function init() {
 
   document.getElementById('btn-start').addEventListener('click', startQuiz);
   document.getElementById('btn-next').addEventListener('click', advance);
-  document.getElementById('btn-retry').addEventListener('click', () => showScreen('screen-welcome'));
+  document.getElementById('btn-retry').addEventListener('click', () => embedMode ? startQuiz() : showScreen('screen-welcome'));
   document.getElementById('btn-home').addEventListener('click', () => showScreen('screen-welcome'));
+
+  if (embedMode) startQuiz();
 }
 
 const QUIZ_LENGTH = 10;

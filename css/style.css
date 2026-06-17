@@ -145,7 +145,8 @@ body::before {
 .stat-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
 
 .embed-mode .lang-bar,
-.embed-mode .site-footer {
+.embed-mode .site-footer,
+.embed-mode #btn-home {
   display: none;
 }
 .site-footer {

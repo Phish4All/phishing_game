@@ -256,7 +256,7 @@ fr: {
       question: "En quelques minutes, votre téléphone reçoit dix notifications de validation de connexion (double authentification) alors que vous n'essayez pas de vous connecter. Quelle est la bonne réaction ?",
       options: [
         "Vous finissez par accepter une notification pour que ça s'arrête",
-        "Vous refusez toutes les demandes, changez immédiatement votre mot de passe et signalez l'incident",
+        "Vous refusez toutes les demandes et changez immédiatement votre mot de passe",
         "Vous ignorez les notifications, elles vont finir par s'arrêter toutes seules",
         "Vous appelez le numéro indiqué dans la notification pour vérifier",
       ],
@@ -667,7 +667,7 @@ en: {
       question: "Within a few minutes, your phone receives ten login approval (multi-factor authentication) prompts even though you're not trying to sign in. What's the right reaction?",
       options: [
         "You eventually approve one just to make it stop",
-        "You deny every request, change your password immediately, and report the incident",
+        "You deny every request and change your password immediately",
         "You ignore the notifications, they'll eventually stop on their own",
         "You call the number shown in the notification to check",
       ],
@@ -1078,7 +1078,7 @@ es: {
       question: "En pocos minutos, tu teléfono recibe diez notificaciones de validación de inicio de sesión (doble factor) sin que estés intentando conectarte. ¿Cuál es la reacción correcta?",
       options: [
         "Acabas aceptando una notificación para que pare de una vez",
-        "Rechazas todas las solicitudes, cambias tu contraseña de inmediato y reportas el incidente",
+        "Rechazas todas las solicitudes y cambias tu contraseña de inmediato",
         "Ignoras las notificaciones, terminarán por detenerse solas",
         "Llamas al número que aparece en la notificación para comprobarlo",
       ],

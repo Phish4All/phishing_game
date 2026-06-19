@@ -26,6 +26,11 @@ const SEC_TX = {
         key: 'q4',
         text: 'Avez-vous déjà été victime de fraude ou d\'usurpation d\'identité ?',
         opts: ['Non, jamais', 'Oui, une fois', 'Oui, plusieurs fois']
+      },
+      {
+        key: 'q5',
+        text: 'Avez-vous activé la double authentification (MFA) sur votre messagerie ?',
+        opts: ['Oui, sur toutes mes boîtes mail', 'Sur certaines seulement', 'Non, jamais']
       }
     ],
     label_risk: 'À risque',
@@ -65,6 +70,11 @@ const SEC_TX = {
         key: 'q4',
         text: 'Have you ever been a victim of fraud or identity theft?',
         opts: ['No, never', 'Yes, once', 'Yes, multiple times']
+      },
+      {
+        key: 'q5',
+        text: 'Have you enabled multi-factor authentication (MFA) on your email account(s)?',
+        opts: ['Yes, on all my email accounts', 'On some accounts only', 'No, never']
       }
     ],
     label_risk: 'At risk',
@@ -104,6 +114,11 @@ const SEC_TX = {
         key: 'q4',
         text: '¿Ha sido víctima de fraude o robo de identidad alguna vez?',
         opts: ['No, nunca', 'Sí, una vez', 'Sí, varias veces']
+      },
+      {
+        key: 'q5',
+        text: '¿Ha activado la autenticación multifactor (MFA) en su(s) cuenta(s) de correo?',
+        opts: ['Sí, en todas mis cuentas de correo', 'Solo en algunas', 'No, nunca']
       }
     ],
     label_risk: 'En riesgo',

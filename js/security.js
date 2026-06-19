@@ -185,7 +185,6 @@ function render() {
     </div>
   `).join('') + '<div id="sec-result" style="margin-top:18px;"></div>';
 
-  document.getElementById('btn-submit').textContent = L.submit;
 }
 
 function evaluate() {
@@ -235,7 +234,12 @@ function evaluate() {
 
 document.addEventListener('DOMContentLoaded', () => {
   render();
-  document.getElementById('btn-submit').addEventListener('click', evaluate);
+  document.getElementById('sec-questions').addEventListener('change', () => {
+    const lang = getLang();
+    const L = SEC_TX[lang] || SEC_TX.fr;
+    const allAnswered = L.questions.every(q => document.querySelector(`input[name="${q.key}"]:checked`));
+    if (allAnswered) evaluate();
+  });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
